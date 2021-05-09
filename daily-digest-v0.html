@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+
+    <title>Quatro Daily Digest</title>
+
+    <style type="text/css">
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; min-width: 100%; background-color: #ffffff">
+    <div
+      style="
+        display: none;
+        font-size: 1px;
+        color: #ffffff;
+        line-height: 1px;
+        max-height: 0px;
+        max-width: 0px;
+        opacity: 0;
+        overflow: hidden;
+      "
+    >
+      Your daily digest is here
+    </div>
+
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td style="padding: 20px 0 30px 0">
+          <table
+            align="center"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="600"
+            style="border-collapse: collapse; border: 1px solid #e0e0e0"
+          >
+            <tr>
+              <td align="left" bgcolor="#fff" style="padding: 40px 30px 30px 25px">
+                <a href="{{appUrl}}">
+                  <img
+                    src="https://storage.googleapis.com/quatro-email-assets-us/app-logo-horizontal-full.png"
+                    alt="Logo."
+                    width="200"
+                    height="56"
+                    style="display: block"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                align="left"
+                bgcolor="#fff"
+                style="
+                  color: #212121;
+                  font-family: Arial, sans-serif;
+                  font-size: 16px;
+                  line-height: 24px;
+                  padding: 10px 30px 15px 30px;
+                "
+              >
+                <p style="margin: 0 0 15px 0">Hi {{ userDisplayName }},</p>
+                <p style="margin: 0">Here's your daily digest of {{ formattedDate }}</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#ffffff" style="padding: 20px 30px 40px 30px">
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="100%"
+                  style="border-collapse: collapse"
+                >
+                  <tr>
+                    <td
+                      width="600"
+                      height="1"
+                      style="
+                        background-color: #e0e0e0;
+                        border-collapse: collapse;
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        mso-line-height-rule: exactly;
+                        line-height: 1px;
+                      "
+                    ></td>
+                  </tr>
+                  <tr>
+                    <td style="color: #212121; font-family: Arial, sans-serif; padding: 30px 0 0 0">
+                      <h1 style="font-size: 24px; margin: 0">Today's completed tasks</h1>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="
+                        color: #212121;
+                        font-family: Arial, sans-serif;
+                        font-size: 16px;
+                        line-height: 24px;
+                        padding: 0 0 30px 0;
+                      "
+                    >
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        style="border-collapse: collapse"
+                      >
+                        {{#each completedTasks }}
+                        <tr>
+                          <td
+                            style="
+                              color: #212121;
+                              font-family: Arial, sans-serif;
+                              font-size: 16px;
+                              line-height: 24px;
+                              padding: 25px 0 0 0;
+                            "
+                          >
+                            <p style="margin: 0">{{this.title}}</p>
+                            <p style="margin: 0; font-size: 14px; color: #757575">
+                              Completed: {{this.formattedCompletedDate}}
+                            </p>
+                          </td>
+                        </tr>
+                        {{else}}
+                        <tr>
+                          <td
+                            style="
+                              color: #212121;
+                              font-family: Arial, sans-serif;
+                              font-size: 16px;
+                              line-height: 24px;
+                              padding: 25px 0 0 0;
+                            "
+                          >
+                            <p style="margin: 0; font-size: 14px; color: #757575">None</p>
+                          </td>
+                        </tr>
+                        {{/each}}
+                      </table>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td
+                      width="600"
+                      height="1"
+                      style="
+                        background-color: #e0e0e0;
+                        border-collapse: collapse;
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        mso-line-height-rule: exactly;
+                        line-height: 1px;
+                      "
+                    ></td>
+                  </tr>
+
+                  <tr>
+                    <td style="color: #212121; font-family: Arial, sans-serif; padding: 30px 0 0 0">
+                      <h1 style="font-size: 24px; margin: 0">Tomorrow's top 4</h1>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td
+                      style="
+                        color: #212121;
+                        font-family: Arial, sans-serif;
+                        font-size: 16px;
+                        line-height: 24px;
+                        padding: 0 0 50px 0;
+                      "
+                    >
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        style="border-collapse: collapse"
+                      >
+                        {{#each topFourTasks }}
+                        <tr>
+                          <td
+                            style="
+                              color: #212121;
+                              font-family: Arial, sans-serif;
+                              font-size: 16px;
+                              line-height: 24px;
+                              padding: 25px 0 0 0;
+                            "
+                          >
+                            <p style="margin: 0">
+                              <a
+                                href="{{this.editTaskUrl}}"
+                                style="text-decoration: none; color: #212121"
+                                >{{this.title}}</a
+                              >
+                            </p>
+                            {{#if this.formattedScheduledStartDate}}
+                            <p style="margin: 0; font-size: 14px; color: #757575">
+                              Scheduled start: {{this.formattedScheduledStartDate}}
+                            </p>
+                            {{/if}} {{#if this.formattedDueDate}}
+                            <p style="margin: 0; font-size: 14px; color: #757575">
+                              Due: {{this.formattedDueDate}}
+                            </p>
+                            {{/if}}
+                          </td>
+                        </tr>
+                        {{else}}
+                        <tr>
+                          <td
+                            style="
+                              color: #212121;
+                              font-family: Arial, sans-serif;
+                              font-size: 16px;
+                              line-height: 24px;
+                              padding: 25px 0 0 0;
+                            "
+                          >
+                            <p style="margin: 0; font-size: 14px; color: #757575">
+                              Your task list and headspace are clear
+                            </p>
+                          </td>
+                        </tr>
+                        {{/each}}
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#fafafa" style="padding: 30px 30px">
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="100%"
+                  style="border-collapse: collapse"
+                >
+                  <tr>
+                    <td
+                      style="color: #757575; font-family: Arial, sans-serif; font-size: 14px"
+                      align="center"
+                    >
+                      <p style="margin: 0">
+                        <a href="{{unsubscribeUrl}}" style="color: #757575">Unsubscribe</a>. Sent by
+                        <a href="https://usequatro.com" style="color: #757575">Quatro</a>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
